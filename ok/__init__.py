@@ -725,6 +725,7 @@ class OK:
         register_notifications(self.global_config)
         og.global_config = self.global_config
         og.set_use_dml()
+        og.set_gpu_device()
         try:
             import ctypes
             # Set DPI Awareness (Windows 10 and 8)
@@ -1192,24 +1193,105 @@ class OkGlobals:
         self.app_path = get_path_relative_to_exe()
         self.use_dml = False
         self.global_config = None
+        self._gpu_adapters = None
         logger.info(f'app path {self.app_path}')
+
+    @staticmethod
+    def _dml_supported_by_os():
+        window_build_number_str = platform.version().split(".")[-1]
+        window_build_number = int(window_build_number_str) if window_build_number_str.isdigit() else 0
+        return window_build_number >= 18362
+
+    @property
+    def gpu_adapters(self):
+        """DXGI adapters for this machine, scanned once and cached."""
+        if self._gpu_adapters is None:
+            from ok.util.gpu_devices import enumerate_dxgi_adapters
+            try:
+                self._gpu_adapters = enumerate_dxgi_adapters()
+            except Exception as e:
+                logger.warning(f'GPU adapter scan failed: {e}')
+                self._gpu_adapters = []
+        return self._gpu_adapters
+
+    @property
+    def gpu_choice(self):
+        """Live value of the GUI GPU Device dropdown, read on every access."""
+        from ok.util.gpu_devices import AUTO_OPTION
+        if self.global_config is None:
+            return AUTO_OPTION
+        try:
+            return self.global_config.get_config('Basic Options').get('GPU Device', AUTO_OPTION) or AUTO_OPTION
+        except Exception:
+            return AUTO_OPTION
+
+    @property
+    def gpu_resolved(self):
+        from ok.util.gpu_devices import resolve
+        return resolve(self.gpu_choice, self.gpu_adapters)
+
+    @property
+    def gpu_device_id(self):
+        """DirectML device_id, or None when inference must run on the CPU."""
+        return self.gpu_resolved.device_id
+
+    def set_gpu_device(self):
+        """Apply the GUI GPU Device selection on top of the Use DirectML switch.
+
+        An explicit device choice wins over the legacy switch: picking a GPU
+        enables DirectML, picking CPU disables it, and Auto keeps whatever the
+        Use DirectML switch decided.
+        """
+        from ok.util.gpu_devices import AUTO_OPTION, CPU_OPTION
+        choice = self.gpu_choice
+        resolved = self.gpu_resolved
+        logger.info(f'GPU Device choice={choice!r} -> device_id={resolved.device_id} '
+                    f'({resolved.resolved_label}) reason={resolved.reason!r}')
+        if choice == CPU_OPTION:
+            if self.use_dml:
+                logger.info('GPU Device=CPU overrides Use DirectML, DirectML disabled')
+            self.use_dml = False
+        elif choice != AUTO_OPTION and resolved.device_id is not None:
+            if not self.use_dml:
+                logger.info(f'GPU Device={choice!r} explicitly selected, enabling DirectML')
+            if self._dml_supported_by_os():
+                self.use_dml = True
+            else:
+                self.use_dml = False
+                logger.warning('Windows build too old for DirectML, keeping it disabled')
+        return resolved
+
+    def create_onnx_session(self, model_path, session_options=None):
+        """Build an ONNX session on the GPU selected in the GUI.
+
+        ``gpu_choice`` is read live, so changing the dropdown takes effect for
+        the next session without a restart. An explicit GPU choice wins over
+        the Use DirectML switch, matching set_gpu_device(); only Auto obeys
+        that switch.
+        """
+        from ok.util.gpu_devices import AUTO_OPTION, CPU_OPTION, create_session
+        choice = self.gpu_choice
+        if choice == AUTO_OPTION and not self.use_dml:
+            choice = CPU_OPTION
+        return create_session(model_path, choice=choice, adapters=self.gpu_adapters,
+                              session_options=session_options)
 
     def set_use_dml(self):
         from ok.util.process import get_first_gpu_free_memory_mib
+        from ok.util.gpu_devices import auto_dml_enabled
 
         use_dml_txt_option = self.global_config.get_config('Basic Options').get('Use DirectML')
         use_dml = False
         if use_dml_txt_option == 'Auto':
             nv_free_gpu_memory = get_first_gpu_free_memory_mib()
-            if nv_free_gpu_memory > 3000:
-                use_dml = True
+            # Falls back to DXGI when there is no NVIDIA GPU at all, so AMD and
+            # Intel only machines do not silently lose DirectML.
+            use_dml = auto_dml_enabled(nv_free_gpu_memory, lambda: self.gpu_adapters)
             logger.info(f'Use DirectML is auto nv_free_gpu_memory: {nv_free_gpu_memory}, use_dml: {use_dml}')
         elif use_dml_txt_option == 'Yes':
             use_dml = True
         if use_dml:
-            window_build_number_str = platform.version().split(".")[-1]
-            window_build_number = int(window_build_number_str) if window_build_number_str.isdigit() else 0
-            use_dml = window_build_number >= 18362
+            use_dml = self._dml_supported_by_os()
         logger.info(f'use_dml result is {use_dml}')
         self.use_dml = use_dml
 

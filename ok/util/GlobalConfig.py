@@ -55,6 +55,28 @@ UPDATE_METHOD_LABELS = {
 }
 UPDATE_METHOD_VALUES = {value: label for label, value in UPDATE_METHOD_LABELS.items()}
 
+GPU_DEVICE_OPTION = 'GPU Device'
+
+_gpu_device_options_cache = None
+
+
+def gpu_device_options():
+    """Dropdown entries for the GPU picker.
+
+    Scans DXGI once per process. The list is hardware-derived, so caching is
+    safe; a failed scan degrades to Auto/CPU instead of breaking startup.
+    """
+    global _gpu_device_options_cache
+    if _gpu_device_options_cache is None:
+        try:
+            from ok.util.gpu_devices import AUTO_OPTION, CPU_OPTION, build_options, enumerate_dxgi_adapters
+            _gpu_device_options_cache = build_options(enumerate_dxgi_adapters())
+        except Exception as e:
+            logger.warning(f'GPU device scan failed, falling back to Auto/CPU: {e}')
+            _gpu_device_options_cache = [AUTO_OPTION, CPU_OPTION]
+    return list(_gpu_device_options_cache)
+
+
 _basic_options_default = {
     'Auto Start Game When App Starts': False,
     'Minimize Window to System Tray when Closing': False,
@@ -62,14 +84,17 @@ _basic_options_default = {
     'Auto Resize Game Window': True,
     'Exit App when Game Exits': False,
     'Use DirectML': 'Yes',
+    GPU_DEVICE_OPTION: 'Auto',
     'Trigger Interval': 1,
     'Start/Stop': 'F9',
     KILL_LAUNCHER_AFTER_START: True,
     'Launch with DX11': False
 }
 _basic_options_type = {'Use DirectML': {'type': "drop_down", 'options': ['Auto', 'Yes', 'No']},
+                       GPU_DEVICE_OPTION: {'type': "drop_down", 'options': gpu_device_options()},
                        'Start/Stop': {'type': "drop_down", 'options': ['None', 'F9', 'F10', 'F11', 'F12']}}
 _basic_options_description = {'Use DirectML': 'Use GPU to Improve Performance',
+                              GPU_DEVICE_OPTION: 'Which GPU to run model inference on; CPU forces software inference',
                               'Start/Stop': 'HotKey',
                               'Trigger Interval': 'Increase Delay between Trigger Tasks to Reduce CPU/GPU Usage(Milliseconds)'}
 _blur_options_default = {'Enable Blur': False, 'Blur Algorithm': 'Inpaint', 'Blur Interval': 1}

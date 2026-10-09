@@ -66,3 +66,6 @@ myRes/
 pytest-cache-files-*/
 .tmp-pytest/
 tmp_install/
+
+# 临时脚本与实验产物
+work/
