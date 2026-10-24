@@ -592,7 +592,7 @@
         </message>
         <message>
             <source>WGC</source>
-            <translation>WGC - &gt;=Win10，快</translation>
+            <translation>WGC - 速度快，支持 HDR（不支持 AutoHDR）</translation>
         </message>
         <message>
             <source>BitBlt</source>
@@ -601,6 +601,22 @@
         <message>
             <source>DXGI</source>
             <translation>DXGI - 最慢，备用</translation>
+        </message>
+        <message>
+            <source>WGC - Fast, support HDR (not AutoHDR)</source>
+            <translation>WGC - 速度快，支持 HDR（不支持 AutoHDR）</translation>
+        </message>
+        <message>
+            <source>WGC_HDR - Only use when using AutoHDR (Not Recommended)</source>
+            <translation>WGC_HDR - 仅在使用 AutoHDR 时使用（不推荐）</translation>
+        </message>
+        <message>
+            <source>Fast, support HDR (not AutoHDR)</source>
+            <translation>速度快，支持 HDR（不支持 AutoHDR）</translation>
+        </message>
+        <message>
+            <source>Only use when using AutoHDR (Not Recommended)</source>
+            <translation>仅在使用 AutoHDR 时使用（不推荐）</translation>
         </message>
     </context>
     <context>
@@ -841,6 +857,10 @@
         <message>
             <source>GPU Driver Warning</source>
             <translation>GPU 驱动警告</translation>
+        </message>
+        <message>
+            <source>Try using Alt+F3 to turn it off.</source>
+            <translation>可尝试按 Alt+F3 将其关闭。</translation>
         </message>
     </context>
     <context>
@@ -1705,6 +1725,50 @@
         <message>
             <source>Enable TLS encryption (STARTTLS for 587, SMTPS for 465)</source>
             <translation>启用 TLS 加密（587 端口用 STARTTLS，465 端口用 SMTPS）</translation>
+        </message>
+        <message>
+            <source>Auto HDR is enabled, tasks might not work correctly!</source>
+            <translation>显示设置自动HDR已打开, 可能导致任务运行异常!</translation>
+        </message>
+        <message>
+            <source>WGC - Fast, support HDR (not AutoHDR)</source>
+            <translation>WGC - 速度快，支持 HDR（不支持 AutoHDR）</translation>
+        </message>
+        <message>
+            <source>WGC_HDR - Only use when using AutoHDR (Not Recommended)</source>
+            <translation>WGC_HDR - 仅在使用 AutoHDR 时使用（不推荐）</translation>
+        </message>
+        <message>
+            <source>Resolution {resolution} check failed, some tasks might not work correctly!</source>
+            <translation>分辨率{resolution}检查失败, 部分任务可能无法正常运行!</translation>
+        </message>
+        <message>
+            <source>, the supported ratio is {supported_ratio}</source>
+            <translation>支持的窗口比例是{supported_ratio}</translation>
+        </message>
+        <message>
+            <source>, the supported min resolution is {min_size}</source>
+            <translation>, 支持的最小分辨率是  {min_size}</translation>
+        </message>
+        <message>
+            <source>{vendor} {feature} is enabled and may cause malfunctions!</source>
+            <translation>{vendor} {feature} 已启用，可能导致功能异常！</translation>
+        </message>
+        <message>
+            <source>GPU Driver Warning</source>
+            <translation>GPU 驱动警告</translation>
+        </message>
+        <message>
+            <source>Fast, support HDR (not AutoHDR)</source>
+            <translation>速度快，支持 HDR（不支持 AutoHDR）</translation>
+        </message>
+        <message>
+            <source>Only use when using AutoHDR (Not Recommended)</source>
+            <translation>仅在使用 AutoHDR 时使用（不推荐）</translation>
+        </message>
+        <message>
+            <source>Try using Alt+F3 to turn it off.</source>
+            <translation>可尝试按 Alt+F3 将其关闭。</translation>
         </message>
     </context>
     <context>
@@ -3696,6 +3760,50 @@
             <source>Update available.</source>
             <translation>有可用更新。</translation>
         </message>
+        <message>
+            <source>Auto HDR is enabled, tasks might not work correctly!</source>
+            <translation>显示设置自动HDR已打开, 可能导致任务运行异常!</translation>
+        </message>
+        <message>
+            <source>WGC - Fast, support HDR (not AutoHDR)</source>
+            <translation>WGC - 速度快，支持 HDR（不支持 AutoHDR）</translation>
+        </message>
+        <message>
+            <source>WGC_HDR - Only use when using AutoHDR (Not Recommended)</source>
+            <translation>WGC_HDR - 仅在使用 AutoHDR 时使用（不推荐）</translation>
+        </message>
+        <message>
+            <source>Resolution {resolution} check failed, some tasks might not work correctly!</source>
+            <translation>分辨率{resolution}检查失败, 部分任务可能无法正常运行!</translation>
+        </message>
+        <message>
+            <source>, the supported ratio is {supported_ratio}</source>
+            <translation>支持的窗口比例是{supported_ratio}</translation>
+        </message>
+        <message>
+            <source>, the supported min resolution is {min_size}</source>
+            <translation>, 支持的最小分辨率是  {min_size}</translation>
+        </message>
+        <message>
+            <source>{vendor} {feature} is enabled and may cause malfunctions!</source>
+            <translation>{vendor} {feature} 已启用，可能导致功能异常！</translation>
+        </message>
+        <message>
+            <source>GPU Driver Warning</source>
+            <translation>GPU 驱动警告</translation>
+        </message>
+        <message>
+            <source>Fast, support HDR (not AutoHDR)</source>
+            <translation>速度快，支持 HDR（不支持 AutoHDR）</translation>
+        </message>
+        <message>
+            <source>Only use when using AutoHDR (Not Recommended)</source>
+            <translation>仅在使用 AutoHDR 时使用（不推荐）</translation>
+        </message>
+        <message>
+            <source>Try using Alt+F3 to turn it off.</source>
+            <translation>可尝试按 Alt+F3 将其关闭。</translation>
+        </message>
     </context>
     <context>
         <name>UpdateCard</name>
@@ -3785,6 +3893,89 @@
         <message>
             <source>Download</source>
             <translation>下载</translation>
+        </message>
+    </context>
+    <context>
+        <name>PluginTab</name>
+        <message>
+            <source>Plugins</source>
+            <translation>插件</translation>
+        </message>
+        <message>
+            <source>Add from ZIP</source>
+            <translation>从 ZIP 添加</translation>
+        </message>
+        <message>
+            <source>Add from GitHub</source>
+            <translation>从 GitHub 添加</translation>
+        </message>
+        <message>
+            <source>No plugins installed.</source>
+            <translation>尚未安装插件。</translation>
+        </message>
+        <message>
+            <source>Version: {}</source>
+            <translation>版本：{}</translation>
+        </message>
+        <message>
+            <source>Delete plugin</source>
+            <translation>删除插件</translation>
+        </message>
+        <message>
+            <source>Working…</source>
+            <translation>正在处理…</translation>
+        </message>
+        <message>
+            <source>Plugin operation failed: {}</source>
+            <translation>插件操作失败：{}</translation>
+        </message>
+        <message>
+            <source>Install plugin</source>
+            <translation>安装插件</translation>
+        </message>
+        <message>
+            <source>GitHub repository</source>
+            <translation>GitHub 仓库</translation>
+        </message>
+        <message>
+            <source>Release asset</source>
+            <translation>发行附件</translation>
+        </message>
+        <message>
+            <source>Plugin installed.</source>
+            <translation>插件已安装。</translation>
+        </message>
+        <message>
+            <source>Delete plugin "{}"?</source>
+            <translation>删除插件“{}”？</translation>
+        </message>
+        <message>
+            <source>Plugin deleted.</source>
+            <translation>插件已删除。</translation>
+        </message>
+        <message>
+            <source>Check for updates</source>
+            <translation>检查更新</translation>
+        </message>
+        <message>
+            <source>Update to {}</source>
+            <translation>更新至 {}</translation>
+        </message>
+        <message>
+            <source>Update check failed: {}</source>
+            <translation>检查更新失败：{}</translation>
+        </message>
+        <message>
+            <source>Update available for {}: {}</source>
+            <translation>{} 有可用更新：{}</translation>
+        </message>
+        <message>
+            <source>Plugin is up to date.</source>
+            <translation>插件已是最新版本。</translation>
+        </message>
+        <message>
+            <source>Checking for updates…</source>
+            <translation>正在检查更新…</translation>
         </message>
     </context>
 </TS>

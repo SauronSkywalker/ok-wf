@@ -590,7 +590,7 @@
         </message>
         <message>
             <source>WGC</source>
-            <translation>WGC - &gt;=Win10、高速</translation>
+            <translation>WGC - 高速、HDR 対応（AutoHDR 非対応）</translation>
         </message>
         <message>
             <source>BitBlt</source>
@@ -599,6 +599,22 @@
         <message>
             <source>DXGI</source>
             <translation>DXGI - 最も遅い、バックアップとして使用</translation>
+        </message>
+        <message>
+            <source>WGC - Fast, support HDR (not AutoHDR)</source>
+            <translation>WGC - 高速、HDR 対応（AutoHDR 非対応）</translation>
+        </message>
+        <message>
+            <source>WGC_HDR - Only use when using AutoHDR (Not Recommended)</source>
+            <translation>WGC_HDR - AutoHDR 使用時のみ使用（非推奨）</translation>
+        </message>
+        <message>
+            <source>Fast, support HDR (not AutoHDR)</source>
+            <translation>高速、HDR 対応（AutoHDR 非対応）</translation>
+        </message>
+        <message>
+            <source>Only use when using AutoHDR (Not Recommended)</source>
+            <translation>AutoHDR 使用時のみ使用（非推奨）</translation>
         </message>
     </context>
     <context>
@@ -839,6 +855,10 @@
         <message>
             <source>GPU Driver Warning</source>
             <translation>GPU ドライバー警告</translation>
+        </message>
+        <message>
+            <source>Try using Alt+F3 to turn it off.</source>
+            <translation>Alt+F3 を押して無効にしてみてください。</translation>
         </message>
     </context>
     <context>
@@ -1699,6 +1719,50 @@
         <message>
             <source>Enable TLS encryption (STARTTLS for 587, SMTPS for 465)</source>
             <translation>TLS 暗号化を有効化（ポート 587 は STARTTLS、465 は SMTPS）</translation>
+        </message>
+        <message>
+            <source>Auto HDR is enabled, tasks might not work correctly!</source>
+            <translation>自動HDRが有効です。タスクが正常に動作しない可能性があります！</translation>
+        </message>
+        <message>
+            <source>WGC - Fast, support HDR (not AutoHDR)</source>
+            <translation>WGC - 高速、HDR 対応（AutoHDR 非対応）</translation>
+        </message>
+        <message>
+            <source>WGC_HDR - Only use when using AutoHDR (Not Recommended)</source>
+            <translation>WGC_HDR - AutoHDR 使用時のみ使用（非推奨）</translation>
+        </message>
+        <message>
+            <source>Resolution {resolution} check failed, some tasks might not work correctly!</source>
+            <translation>解像度{resolution}のチェックに失敗しました。一部のタスクが正常に動作しない可能性があります！</translation>
+        </message>
+        <message>
+            <source>, the supported ratio is {supported_ratio}</source>
+            <translation>、サポートされている比率は{supported_ratio}です</translation>
+        </message>
+        <message>
+            <source>, the supported min resolution is {min_size}</source>
+            <translation>、サポートされている最小解像度は{min_size}です</translation>
+        </message>
+        <message>
+            <source>{vendor} {feature} is enabled and may cause malfunctions!</source>
+            <translation>{vendor} {feature} が有効になっており、誤動作の原因になる可能性があります！</translation>
+        </message>
+        <message>
+            <source>GPU Driver Warning</source>
+            <translation>GPU ドライバー警告</translation>
+        </message>
+        <message>
+            <source>Fast, support HDR (not AutoHDR)</source>
+            <translation>高速、HDR 対応（AutoHDR 非対応）</translation>
+        </message>
+        <message>
+            <source>Only use when using AutoHDR (Not Recommended)</source>
+            <translation>AutoHDR 使用時のみ使用（非推奨）</translation>
+        </message>
+        <message>
+            <source>Try using Alt+F3 to turn it off.</source>
+            <translation>Alt+F3 を押して無効にしてみてください。</translation>
         </message>
     </context>
     <context>
@@ -3690,6 +3754,50 @@
             <source>Update available.</source>
             <translation>更新があります。</translation>
         </message>
+        <message>
+            <source>Auto HDR is enabled, tasks might not work correctly!</source>
+            <translation>自動HDRが有効です。タスクが正常に動作しない可能性があります！</translation>
+        </message>
+        <message>
+            <source>WGC - Fast, support HDR (not AutoHDR)</source>
+            <translation>WGC - 高速、HDR 対応（AutoHDR 非対応）</translation>
+        </message>
+        <message>
+            <source>WGC_HDR - Only use when using AutoHDR (Not Recommended)</source>
+            <translation>WGC_HDR - AutoHDR 使用時のみ使用（非推奨）</translation>
+        </message>
+        <message>
+            <source>Resolution {resolution} check failed, some tasks might not work correctly!</source>
+            <translation>解像度{resolution}のチェックに失敗しました。一部のタスクが正常に動作しない可能性があります！</translation>
+        </message>
+        <message>
+            <source>, the supported ratio is {supported_ratio}</source>
+            <translation>、サポートされている比率は{supported_ratio}です</translation>
+        </message>
+        <message>
+            <source>, the supported min resolution is {min_size}</source>
+            <translation>、サポートされている最小解像度は{min_size}です</translation>
+        </message>
+        <message>
+            <source>{vendor} {feature} is enabled and may cause malfunctions!</source>
+            <translation>{vendor} {feature} が有効になっており、誤動作の原因になる可能性があります！</translation>
+        </message>
+        <message>
+            <source>GPU Driver Warning</source>
+            <translation>GPU ドライバー警告</translation>
+        </message>
+        <message>
+            <source>Fast, support HDR (not AutoHDR)</source>
+            <translation>高速、HDR 対応（AutoHDR 非対応）</translation>
+        </message>
+        <message>
+            <source>Only use when using AutoHDR (Not Recommended)</source>
+            <translation>AutoHDR 使用時のみ使用（非推奨）</translation>
+        </message>
+        <message>
+            <source>Try using Alt+F3 to turn it off.</source>
+            <translation>Alt+F3 を押して無効にしてみてください。</translation>
+        </message>
     </context>
     <context>
         <name>UpdateCard</name>
@@ -3779,6 +3887,89 @@
         <message>
             <source>Download</source>
             <translation>ダウンロード</translation>
+        </message>
+    </context>
+    <context>
+        <name>PluginTab</name>
+        <message>
+            <source>Plugins</source>
+            <translation>プラグイン</translation>
+        </message>
+        <message>
+            <source>Add from ZIP</source>
+            <translation>ZIP から追加</translation>
+        </message>
+        <message>
+            <source>Add from GitHub</source>
+            <translation>GitHub から追加</translation>
+        </message>
+        <message>
+            <source>No plugins installed.</source>
+            <translation>プラグインはインストールされていません。</translation>
+        </message>
+        <message>
+            <source>Version: {}</source>
+            <translation>バージョン：{}</translation>
+        </message>
+        <message>
+            <source>Delete plugin</source>
+            <translation>プラグインを削除</translation>
+        </message>
+        <message>
+            <source>Working…</source>
+            <translation>処理中…</translation>
+        </message>
+        <message>
+            <source>Plugin operation failed: {}</source>
+            <translation>プラグインの操作に失敗しました：{}</translation>
+        </message>
+        <message>
+            <source>Install plugin</source>
+            <translation>プラグインをインストール</translation>
+        </message>
+        <message>
+            <source>GitHub repository</source>
+            <translation>GitHub リポジトリ</translation>
+        </message>
+        <message>
+            <source>Release asset</source>
+            <translation>リリースのファイル</translation>
+        </message>
+        <message>
+            <source>Plugin installed.</source>
+            <translation>プラグインをインストールしました。</translation>
+        </message>
+        <message>
+            <source>Delete plugin "{}"?</source>
+            <translation>プラグイン「{}」を削除しますか？</translation>
+        </message>
+        <message>
+            <source>Plugin deleted.</source>
+            <translation>プラグインを削除しました。</translation>
+        </message>
+        <message>
+            <source>Check for updates</source>
+            <translation>更新を確認</translation>
+        </message>
+        <message>
+            <source>Update to {}</source>
+            <translation>{} に更新</translation>
+        </message>
+        <message>
+            <source>Update check failed: {}</source>
+            <translation>更新の確認に失敗しました：{}</translation>
+        </message>
+        <message>
+            <source>Update available for {}: {}</source>
+            <translation>{} の更新があります：{}</translation>
+        </message>
+        <message>
+            <source>Plugin is up to date.</source>
+            <translation>プラグインは最新です。</translation>
+        </message>
+        <message>
+            <source>Checking for updates…</source>
+            <translation>更新を確認中…</translation>
         </message>
     </context>
 </TS>

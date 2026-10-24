@@ -590,7 +590,7 @@
         </message>
         <message>
             <source>WGC</source>
-            <translation>WGC - &gt;=Win10, Rápido</translation>
+            <translation>WGC - Rápido, compatible con HDR (no AutoHDR)</translation>
         </message>
         <message>
             <source>BitBlt</source>
@@ -599,6 +599,22 @@
         <message>
             <source>DXGI</source>
             <translation>DXGI - Más lento, usado como respaldo</translation>
+        </message>
+        <message>
+            <source>WGC - Fast, support HDR (not AutoHDR)</source>
+            <translation>WGC - Rápido, compatible con HDR (no AutoHDR)</translation>
+        </message>
+        <message>
+            <source>WGC_HDR - Only use when using AutoHDR (Not Recommended)</source>
+            <translation>WGC_HDR - Usar solo con AutoHDR (no recomendado)</translation>
+        </message>
+        <message>
+            <source>Fast, support HDR (not AutoHDR)</source>
+            <translation>Rápido, compatible con HDR (no AutoHDR)</translation>
+        </message>
+        <message>
+            <source>Only use when using AutoHDR (Not Recommended)</source>
+            <translation>Usar solo con AutoHDR (no recomendado)</translation>
         </message>
     </context>
     <context>
@@ -839,6 +855,10 @@
         <message>
             <source>GPU Driver Warning</source>
             <translation>Advertencia del controlador de GPU</translation>
+        </message>
+        <message>
+            <source>Try using Alt+F3 to turn it off.</source>
+            <translation>Prueba a pulsar Alt+F3 para desactivarlo.</translation>
         </message>
     </context>
     <context>
@@ -1707,6 +1727,50 @@
         <message>
             <source>Enable TLS encryption (STARTTLS for 587, SMTPS for 465)</source>
             <translation>Habilitar cifrado TLS (STARTTLS en el puerto 587, SMTPS en el 465)</translation>
+        </message>
+        <message>
+            <source>Auto HDR is enabled, tasks might not work correctly!</source>
+            <translation>El HDR automático está activado, ¡las tareas podrían no funcionar correctamente!</translation>
+        </message>
+        <message>
+            <source>WGC - Fast, support HDR (not AutoHDR)</source>
+            <translation>WGC - Rápido, compatible con HDR (no AutoHDR)</translation>
+        </message>
+        <message>
+            <source>WGC_HDR - Only use when using AutoHDR (Not Recommended)</source>
+            <translation>WGC_HDR - Usar solo con AutoHDR (no recomendado)</translation>
+        </message>
+        <message>
+            <source>Resolution {resolution} check failed, some tasks might not work correctly!</source>
+            <translation>La comprobación de la resolución {resolution} falló, ¡algunas tareas podrían no funcionar correctamente!</translation>
+        </message>
+        <message>
+            <source>, the supported ratio is {supported_ratio}</source>
+            <translation>, la proporción admitida es {supported_ratio}</translation>
+        </message>
+        <message>
+            <source>, the supported min resolution is {min_size}</source>
+            <translation>, la resolución mínima admitida es {min_size}</translation>
+        </message>
+        <message>
+            <source>{vendor} {feature} is enabled and may cause malfunctions!</source>
+            <translation>¡Se ha activado {vendor} {feature} y puede causar fallos de funcionamiento!</translation>
+        </message>
+        <message>
+            <source>GPU Driver Warning</source>
+            <translation>Advertencia del controlador de GPU</translation>
+        </message>
+        <message>
+            <source>Fast, support HDR (not AutoHDR)</source>
+            <translation>Rápido, compatible con HDR (no AutoHDR)</translation>
+        </message>
+        <message>
+            <source>Only use when using AutoHDR (Not Recommended)</source>
+            <translation>Usar solo con AutoHDR (no recomendado)</translation>
+        </message>
+        <message>
+            <source>Try using Alt+F3 to turn it off.</source>
+            <translation>Prueba a pulsar Alt+F3 para desactivarlo.</translation>
         </message>
     </context>
     <context>
@@ -3698,6 +3762,50 @@
             <source>Update available.</source>
             <translation>Hay una actualización disponible.</translation>
         </message>
+        <message>
+            <source>Auto HDR is enabled, tasks might not work correctly!</source>
+            <translation>El HDR automático está activado, ¡las tareas podrían no funcionar correctamente!</translation>
+        </message>
+        <message>
+            <source>WGC - Fast, support HDR (not AutoHDR)</source>
+            <translation>WGC - Rápido, compatible con HDR (no AutoHDR)</translation>
+        </message>
+        <message>
+            <source>WGC_HDR - Only use when using AutoHDR (Not Recommended)</source>
+            <translation>WGC_HDR - Usar solo con AutoHDR (no recomendado)</translation>
+        </message>
+        <message>
+            <source>Resolution {resolution} check failed, some tasks might not work correctly!</source>
+            <translation>La comprobación de la resolución {resolution} falló, ¡algunas tareas podrían no funcionar correctamente!</translation>
+        </message>
+        <message>
+            <source>, the supported ratio is {supported_ratio}</source>
+            <translation>, la proporción admitida es {supported_ratio}</translation>
+        </message>
+        <message>
+            <source>, the supported min resolution is {min_size}</source>
+            <translation>, la resolución mínima admitida es {min_size}</translation>
+        </message>
+        <message>
+            <source>{vendor} {feature} is enabled and may cause malfunctions!</source>
+            <translation>¡Se ha activado {vendor} {feature} y puede causar fallos de funcionamiento!</translation>
+        </message>
+        <message>
+            <source>GPU Driver Warning</source>
+            <translation>Advertencia del controlador de GPU</translation>
+        </message>
+        <message>
+            <source>Fast, support HDR (not AutoHDR)</source>
+            <translation>Rápido, compatible con HDR (no AutoHDR)</translation>
+        </message>
+        <message>
+            <source>Only use when using AutoHDR (Not Recommended)</source>
+            <translation>Usar solo con AutoHDR (no recomendado)</translation>
+        </message>
+        <message>
+            <source>Try using Alt+F3 to turn it off.</source>
+            <translation>Prueba a pulsar Alt+F3 para desactivarlo.</translation>
+        </message>
     </context>
     <context>
         <name>UpdateCard</name>
@@ -3787,6 +3895,89 @@
         <message>
             <source>Download</source>
             <translation>Descargar</translation>
+        </message>
+    </context>
+    <context>
+        <name>PluginTab</name>
+        <message>
+            <source>Plugins</source>
+            <translation>Complementos</translation>
+        </message>
+        <message>
+            <source>Add from ZIP</source>
+            <translation>Añadir desde ZIP</translation>
+        </message>
+        <message>
+            <source>Add from GitHub</source>
+            <translation>Añadir desde GitHub</translation>
+        </message>
+        <message>
+            <source>No plugins installed.</source>
+            <translation>No hay complementos instalados.</translation>
+        </message>
+        <message>
+            <source>Version: {}</source>
+            <translation>Versión: {}</translation>
+        </message>
+        <message>
+            <source>Delete plugin</source>
+            <translation>Eliminar complemento</translation>
+        </message>
+        <message>
+            <source>Working…</source>
+            <translation>Procesando…</translation>
+        </message>
+        <message>
+            <source>Plugin operation failed: {}</source>
+            <translation>Error en la operación del complemento: {}</translation>
+        </message>
+        <message>
+            <source>Install plugin</source>
+            <translation>Instalar complemento</translation>
+        </message>
+        <message>
+            <source>GitHub repository</source>
+            <translation>Repositorio de GitHub</translation>
+        </message>
+        <message>
+            <source>Release asset</source>
+            <translation>Archivo de la versión</translation>
+        </message>
+        <message>
+            <source>Plugin installed.</source>
+            <translation>Complemento instalado.</translation>
+        </message>
+        <message>
+            <source>Delete plugin "{}"?</source>
+            <translation>¿Eliminar el complemento "{}"?</translation>
+        </message>
+        <message>
+            <source>Plugin deleted.</source>
+            <translation>Complemento eliminado.</translation>
+        </message>
+        <message>
+            <source>Check for updates</source>
+            <translation>Buscar actualizaciones</translation>
+        </message>
+        <message>
+            <source>Update to {}</source>
+            <translation>Actualizar a {}</translation>
+        </message>
+        <message>
+            <source>Update check failed: {}</source>
+            <translation>Error al buscar actualizaciones: {}</translation>
+        </message>
+        <message>
+            <source>Update available for {}: {}</source>
+            <translation>Actualización disponible para {}: {}</translation>
+        </message>
+        <message>
+            <source>Plugin is up to date.</source>
+            <translation>El complemento está actualizado.</translation>
+        </message>
+        <message>
+            <source>Checking for updates…</source>
+            <translation>Buscando actualizaciones…</translation>
         </message>
     </context>
 </TS>
